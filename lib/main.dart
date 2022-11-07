@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      onGenerateTitle: (context) => AppLocalizations.of(context).title,
       // This is the theme of your application.
       //
       // Try running your application with "flutter run". You'll see the
@@ -29,15 +30,8 @@ class MyApp extends StatelessWidget {
       darkTheme: FlexThemeData.dark(scheme: FlexScheme.bigStone),
       // Use dark or light theme based on system setting.
       themeMode: ThemeMode.system,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('en', ''),
-        Locale('zh', 'TW'),
-      ],
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }

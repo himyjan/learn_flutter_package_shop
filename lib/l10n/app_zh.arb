@@ -1,3 +1,4 @@
 {
-    "helloWorld": "你好！"
+  "title": "Flutter Demo",
+  "helloWorld": "你好！"
 }
