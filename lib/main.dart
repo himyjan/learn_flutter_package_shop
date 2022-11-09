@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: _router,
       onGenerateTitle: (context) => AppLocalizations.of(context).title,
       // This is the theme of your application.
       //
@@ -32,10 +34,26 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
+
+final GoRouter _router = GoRouter(
+  routes: <GoRoute>[
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) {
+        return const MyHomePage(title: 'Flutter Demo Home Page');
+      },
+    ),
+    GoRoute(
+      path: '/b',
+      builder: (BuildContext context, GoRouterState state) {
+        return const MyHomePage(title: 'Flutter Demo Home Page');
+      },
+    ),
+  ],
+);
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
