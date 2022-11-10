@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_web_plugins/url_strategy.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -7,6 +8,7 @@ import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:shop/pages/MyHomePage/MyHomePage.dart';
 
 void main() {
+  usePathUrlStrategy(); // https://docs.flutter.dev/development/ui/navigation/url-strategies
   runApp(const ProviderScope(child: MyApp()));
 }
 
