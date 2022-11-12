@@ -1,17 +1,4 @@
-
 # serverpod_app_server
-
-SERVERPOD CREATED 🥳
-
-All setup. You are ready to rock!
-
-Start your Serverpod by running:
-
-```
-cd serverpod_app/serverpod_app_server
-docker-compose up --build --detach
-dart bin/main.dart
-```
 
 This is the starting point for your Serverpod server.
 
@@ -26,4 +13,3 @@ Then you can start the Serverpod server.
 When you are finished, you can shut down Serverpod with `Ctrl-C`, then stop Postgres and Redis.
 
     docker-compose stop
-
