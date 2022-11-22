@@ -5,7 +5,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:serverpod_app_flutter/pages/MyHomePage/MyHomePage.dart';
+import 'package:serverpod_app_flutter/pages/HomePage/HomePage.dart';
 
 void main() {
   usePathUrlStrategy(); // https://docs.flutter.dev/development/ui/navigation/url-strategies
@@ -46,13 +46,13 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const MyHomePage(title: 'Flutter Demo Home Page');
+        return const HomePage(title: 'Flutter Demo Home Page');
       },
     ),
     GoRoute(
       path: '/b',
       builder: (BuildContext context, GoRouterState state) {
-        return const MyHomePage(title: 'Flutter Demo Home Page');
+        return const HomePage(title: 'Flutter Demo Home Page');
       },
     ),
   ],
