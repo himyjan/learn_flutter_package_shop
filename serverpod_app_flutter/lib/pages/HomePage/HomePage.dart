@@ -16,6 +16,20 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final date = ref.watch(currentDateProvider);
+    final screens = [
+      const Center(
+        child: Text(''),
+      ),
+      const Center(
+        child: Text(''),
+      ),
+      const Center(
+        child: Text(''),
+      ),
+      const Center(
+        child: Text(''),
+      ),
+    ];
     int navigationBarIndex = ref.watch(navigationBarProvider);
     return Scaffold(
         bottomNavigationBar: NavigationBarTheme(

@@ -6,6 +6,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:serverpod_app_flutter/pages/HomePage/HomePage.dart';
+import 'package:upgrader/upgrader.dart';
 
 void main() {
   usePathUrlStrategy(); // https://docs.flutter.dev/development/ui/navigation/url-strategies
@@ -46,7 +47,8 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/',
       builder: (BuildContext context, GoRouterState state) {
-        return const HomePage(title: 'Flutter Demo Home Page');
+        return UpgradeAlert(
+            child: const HomePage(title: 'Flutter Demo Home Page'));
       },
     ),
     GoRoute(
