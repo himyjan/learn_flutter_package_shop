@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+import '../../widgets/NavigationSideDrawer.dart';
 
 final currentDateProvider = Provider<DateTime>((ref) {
   return DateTime.now();
@@ -32,14 +35,17 @@ class HomePage extends ConsumerWidget {
     ];
     int navigationBarIndex = ref.watch(navigationBarProvider);
     return Scaffold(
+        drawer: NavigationSideDrawer(),
         bottomNavigationBar: NavigationBarTheme(
           data: const NavigationBarThemeData(indicatorColor: Colors.blue),
           child: NavigationBar(
             height: 60,
             backgroundColor: Colors.grey,
             selectedIndex: navigationBarIndex,
-            onDestinationSelected: (index) =>
-                {ref.read(navigationBarProvider.notifier).state = index},
+            onDestinationSelected: (index) => {
+              ref.read(navigationBarProvider.notifier).state = index,
+              context.go('/b')
+            },
             destinations: const [
               NavigationDestination(
                   icon: Icon(Icons.email_outlined), label: 'Email'),
