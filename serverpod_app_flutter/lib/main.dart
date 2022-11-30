@@ -5,10 +5,13 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:serverpod_app_flutter/pages/HomePage/HomePage.dart';
 import 'package:upgrader/upgrader.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
   usePathUrlStrategy(); // https://docs.flutter.dev/development/ui/navigation/url-strategies
   runApp(const ProviderScope(child: MyApp()));
 }
