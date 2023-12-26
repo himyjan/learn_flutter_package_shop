@@ -52,7 +52,7 @@ dependencies:
   camera: ^0.10.0+4
   flutter_image: ^4.1.4
   lottie: ^2.0.0
-  http: ^0.13.5
+  http: ^1.0.0
   device_info_plus: ^9.0.0
   upgrader: ^5.0.0
   internet_connection_checker: ^1.0.0+1
