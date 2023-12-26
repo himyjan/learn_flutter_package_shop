@@ -7,7 +7,7 @@ environment:
   sdk: "<4.0.0"
 
 dependencies:
-  serverpod: ^0.9.19
+  serverpod: ^1.0.0
 
 dev_dependencies:
   lints: ^2.0.1
