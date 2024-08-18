@@ -55,7 +55,7 @@ dependencies:
   http: ^1.0.0
   device_info_plus: ^10.0.0
   upgrader: ^10.0.0
-  internet_connection_checker: ^1.0.0+1
+  internet_connection_checker: ^2.0.0
   intro_slider: ^4.2.0
   loading_animation_widget: ^1.2.0+3
   flutter_launcher_icons: ^0.13.0
